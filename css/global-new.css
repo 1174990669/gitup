@@ -1,0 +1,176 @@
+/*一些公用样式*/
+*{ margin: 0; padding: 0;box-sizing: border-box;}
+ul, li { list-style-type: none; }
+button { cursor: pointer; }
+a, a:link { color: #222; text-decoration: none; }
+a:visited {  }
+a:active, a:hover { text-decoration: underline; }
+a:focus { outline: none; }
+.clean{clear:both;}
+a:link,a:visited{
+ text-decoration:none;  /*超链接无下划线*/
+}
+a:hover{
+ text-decoration:underline;  /*鼠标放上去有下划线*/
+}
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+}
+/*一些公用样式*/
+.location{
+    display: block;
+}
+.clear{
+    clear: both;
+}
+body {
+    background: #fff;
+    font-family:"Microsoft YaHei";
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+    min-width: 1920px;
+    min-height: 768px;
+}
+
+/*头部header*/
+header{
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid #00bbff;
+    z-index:9999;
+    background: #fff;
+}
+.header-con{
+    width: 1024px;
+    min-width: 1024px;
+    height: 80px;
+    line-height: 80px;
+    margin:auto;
+}
+.header-left img{
+    width: 150px;
+    height: 45px; 
+    margin-top: 20px;
+}
+.father>li{
+    position: relative;
+    display: inline-block;
+    width: 105px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.active{
+    background: #00bbff;
+    color:#fff;
+}
+.active a{
+    display: block;
+    color:#fff;
+    text-decoration: none;
+}
+
+
+.children{
+    position: absolute;
+    left: 0;
+    top: 65px;
+    display: none;  
+}
+.child{
+    margin-top: -16px;
+    background-color: #fff;  
+    -webkit-box-shadow:0 0 5px #D2CECE;
+    -moz-box-shadow:0 0 5px #D2CECE;; 
+    box-shadow:0 0 5px #D2CECE;; 
+}
+
+.child li{
+    border-bottom:1px solid #e2e2e2;
+    width: 124px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    line-height: 50px;
+}
+.child li:last-child{
+    border-bottom:none;
+}
+.child li:hover{
+    border-left: 2px solid #00bbff;
+}
+
+.child li a{
+    color: #8e8e8e;
+    text-decoration: blink;
+    display: inline-block;
+    width: 100%;
+}
+.child li a:hover{
+    color: #000;
+    text-decoration: blink;
+}
+
+.arrow{  /*尖角代码*/
+    width: 0;
+    height: 0;
+    border:solid 8px;
+    border-color:rgba(0,0,0,0)  rgba(0,0,0,0)  #fff;
+    position: relative;
+    top: 0px;
+    left: 10px;
+}
+.arrow2{  
+    width: 0;
+    height: 0;
+    border: solid 8px;
+    border-color: rgba(0,0,0,0) rgba(0,0,0,0) #3E3C3C;
+    position: relative;
+    top: -16px;
+    left: 10px;
+    z-index: -100;
+}
+/*头部header结束*/
+/*页面底部*/
+.footer {
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #d4d4d4;
+    font-size: 12px;
+    color:#808080;
+}
+    .footer .outer {
+    width: 1024px;
+    margin: 0 auto;
+}
+.footer .footer_details{
+    height: 40px;
+    padding-top:10px;
+}
+.qrcode-text{
+    float: left;
+    color: #a5a5a5;
+    line-height: 20px;
+    margin: -6px 0 0 10px;
+}
+.sites{
+    height: 18px;
+    margin: 0;
+}
+.sep{
+    margin: 0 .25em;
+    color:#9c9c9c;
+    font-family: sans-serif;
+}
+.sites a{
+    color:#9c9c9c;
+}

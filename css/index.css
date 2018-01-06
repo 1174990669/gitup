@@ -1,0 +1,392 @@
+
+html, body {
+    position: relative;
+    height: 100%;
+}
+body {
+    background: #fff;
+    font-family:"Microsoft YaHei";
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+    min-width: 1200px;
+    min-height: 550px; 
+
+}
+.clear{
+    clear: both;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-container-v{
+    padding-top:80px;
+}
+
+.swiper-container-h > .swiper-pagination-h{
+    bottom: 28%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+
+.swiper-slide > img{
+    width: 100%;
+    height: 100%;
+}
+
+/*第一屏轮播*/
+.ad-bg {
+    position: absolute;
+    width: 54%;
+    height: 18%;
+    left: 22%;
+    background: #aaa9a9;
+    z-index: 999;
+    bottom: 33px;
+    filter:alpha(opacity=30); /*IE滤镜，透明度50%*/
+    -moz-opacity:0.3; /*Firefox私有，透明度50%*/
+    opacity:0.3;/*其他，透明度50%*/
+
+}
+.swiper-container-h2{
+    position: absolute;
+    bottom: 55px;
+    width:52%;
+    height: 12.5%;
+    left:23%;
+    z-index: 999;
+}
+/*广告位轮播按钮*/
+.swiper-pagination-h2{
+    bottom: 34px;
+    z-index: 999;
+    width: 100%;
+}
+.swiper-pagination-h2 > .swiper-pagination-bullet{
+    margin:0 5px;
+}
+.swiper-container-h2 > .swiper-wrapper > .swiper-slide{
+    width:50%;
+}
+.ad_img{
+    position:absolute;
+    left:0;
+    top:0;
+}
+.ad_img2{
+    position: absolute;
+    right: 0;
+    top: 0;
+    /* width: 43%; */
+    height: 100%;
+}
+.ad_link{
+    font-size: 12px;
+    text-align: left;
+    width: 61%;
+    position: absolute;
+    left: 15%;
+    overflow: hidden;
+    height: 100%;
+    padding-top: 2%;
+}
+/*第二屏轮播*/
+.slide2{
+    background: url(../images/index/slide2.png) no-repeat;
+    background-size: 100% 100%;
+    color:#fff !important;
+}
+.re-div{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.slide2-cent{
+    position:absolute;
+    bottom: 0;
+    left: 20%;
+    width: 60%;
+    /*height: 548px;*/
+    height: 75%;
+}
+.phone-img{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 49%;
+}
+.slide-img{
+    position: absolute;
+    left: 33%;
+    bottom: 0;
+    width: 52%;
+}
+.phone-img >img{
+    width: 100%;
+    margin-bottom: -5px; 
+}
+.icons{
+    position: absolute;
+    right: 0;
+    top: 10%;
+    width: 50%;
+}
+.icon{
+    float: left;
+    width: 28%;
+    height: 170px;
+}
+.icon > img{
+    cursor: pointer;
+}
+.icon-name{
+    margin-top:10px;
+}
+.data0,.data1,.data2,.data3,.data4{
+    text-align: left;
+    width: 76%;
+    margin-left: 7%;
+    line-height: 2;
+}
+.data1,.data2,.data3,.data4{
+    display: none;
+}
+.data-lg{
+    font-size: 14px;
+}
+.data-sm{
+    font-size: 12px;
+}
+.data-detail{
+    height: 76px;
+    overflow: hidden;
+}
+
+/*第三屏轮播*/
+.sl-img{
+    position: relative;
+    width: 52%;
+    top: 10%;
+}
+.slide3-img{
+    width: 100%;
+    height: 100%;
+}
+.slide-top-title{
+    position: absolute;
+    top: 6%;
+    left: 0;
+    width: 100%;
+}
+.slide-top-title > .big-title{
+    font-size: 40px;
+    color:#333;
+}
+.slide-top-title > .small-title{
+    font-size: 20px;
+    color:#333;
+    margin-top: 10px;
+}
+.slides{
+    width: 47%;
+    height: 15%;
+
+}
+.h-one,.h-two,.h-three,.h-four,.h-five{
+    position: absolute;
+}
+.h-one{
+    left: 7%;
+    top: 49%;
+}
+.h-two{
+    left: 22%;
+    top: 28%;
+}
+.h-three{
+    left: 53%;
+    bottom: 27%;
+}
+.h-four{
+    right: 33%;
+    bottom: 3%;
+}
+.h-five{
+    right: 16%;
+    top: 8%;
+}
+
+.h-quan{
+    position: absolute;
+    top:0;
+    z-index: 999;
+    cursor:pointer;
+    width: 20%;
+}
+
+.h-detail{
+    position: absolute;
+    width: 0px;
+    height: 100%;
+    opacity: 0;
+}
+.h-l{
+    left: 0;
+}
+.h-r{
+    right: 0;
+}
+/*第四屏轮播*/
+.point{
+    width: 1024px;
+    margin-top: 3%;
+}
+.items{
+    margin-left: 22px;
+    width: 100%;
+}
+.item{
+    display: inline-block;
+    width: 24%;
+    color: #333;
+}
+.item > img{
+    width: 85%;
+}
+.item-itro{
+    padding-left: 24px;
+}
+.item-title{
+    margin-top: -7px;
+    font-size: 24px;
+    width: 160px;
+}
+.hr-smrz,.hr-jszr,.hr-jgwy,.hr-zflh{  
+    height: 3px;
+    border: none;
+    width: 35px;
+    margin: auto;
+    margin-top: 4px;
+}
+.hr-smrz{
+    background: #4da9eb;
+}
+.hr-jszr{
+    background: #ffc231;
+}
+.hr-jgwy{
+    background: #8ed700;
+}
+.hr-zflh{
+    background: #0acdbe;
+}
+.item-detail{
+    width: 160px;
+    margin-top: 20px;
+}
+.item-detail li{
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/*第五屏轮播*/
+.water-div{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 36%;
+    left: 0;
+}
+.cities{
+    margin-top: 6%;
+    position: absolute;
+    z-index: 9999;
+    left: 0;
+    width: 100%;
+}
+.local{
+    position: absolute;
+    z-index: 9999;
+    bottom: 4%;
+    width: 20%;
+    left: 40%;
+    font-size: 16px;
+}
+.p_icon{
+    margin-top: 83px;
+}
+.p_icon li{
+    float: left;
+    margin-left:30px;
+    margin-bottom:30px;
+}
+
+
+/*第六屏轮播*/
+.slide6-left,.slide6-right{
+    position:relative;
+    width: 50%;
+    height: 100%;
+}
+.slide6-left{
+    background: #71c4ff;
+}
+.cont-left{
+    float: right;
+    margin-right: 10%;
+}
+.dow-font{
+    font-size: 40px;
+    color: #fff;
+    margin: 20% 0px 20% 0px;
+}
+.dow-img{
+    margin-top: 44%;
+}
+.dow-img p{
+    color:#fff;
+    margin-top:10px;
+}
+.dow-icon{
+        margin-top: 20%;
+}
+.dow-icon p{
+    margin-top:10px;
+}
+
+.cont-right{
+    float: left;
+    margin-left:10%;
+}
+.cor-font{
+    font-size: 40px;
+    margin: 20% 0px 20% 0px;
+}
+.footer{
+    position:absolute;
+    width:100%;
+    left:0;
+    bottom:0;
+    height: 46px;
+    z-index: 3;
+}

@@ -1,0 +1,122 @@
+body{
+	min-width: 1024px;
+}
+.movement_box{
+	margin: 0 auto;
+	width: 1024px;
+	border: 1px solid #fff;
+	margin-top: 80px;
+}
+.movement_font{
+	width: 678px;
+	border:1px solid #fff;
+	margin: 50px 0 50px 5px;
+}
+.t2{
+	text-indent: 2em;
+}
+.pt27{
+	padding-top: 27px;
+}
+.f16{
+	font-size: 16px;
+}
+.pt22{
+	padding-top: 22px;
+}
+.ln26{
+	line-height: 26px;
+}
+.fenxiang{
+	font-size: 12px;
+}
+.txweibo,.qqkjian,.qq,.xlweibo,.weixin{
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
+}
+.txweibo{
+	margin-left: 18px;
+}
+.qqkjian,.qq,.xlweibo,.weixin{
+	margin-left:8px;
+}
+/*助家新闻*/
+.zjnews{
+	width: 288px;
+	text-align: right;
+	border: 1px solid #fff;
+	/*margin-top:50px;*/
+	margin-left: 50px;
+
+}
+.Tit_06{
+	height: 34px;
+	border-top: 2px solid #c9c9c9;
+	color: #b81b25;
+	margin-top: 50px;
+}
+.Tit_06 .t_name{
+	font: bold 17px/28px "Microsoft YaHei","微软雅黑","宋体";
+    float: left;
+    height: 28px;
+    border-top: 2px solid #b81b25;
+    margin-top: -2px;
+    position: relative;
+    padding-right: 10px;
+    padding-top: 9px;
+}
+.blk_33{
+	padding: 5px 0 8px;
+}
+.list_14{
+	line-height: 24px;
+    font-size: 14px;
+    padding: 7px 0 5px;
+    margin-top: 15px;
+}
+.list_14 li{
+	padding-left: 13px;
+	padding-right: 90px;
+    background: url(http://i2.sinaimg.cn/dy/deco/2012/0724/news_m_04.png) no-repeat -475px -613px;
+    height: 24px;
+    overflow: hidden;
+}
+.list_14 li a{
+	text-decoration:none;
+}
+.list_14 li a:hover{
+	color:red;
+}
+.xinlang_img,.souhu_img,.wangyi_img,.fenghuang_img{
+
+}
+.coping{
+	border:1px solid #bbb;
+	margin-top: 54px;
+}
+.zhujshapp{
+	padding-right: 120px;
+	padding-top: 16px;
+	font-size: 24px;
+	font-weight: bold;
+}
+.jiajufuwu{
+	padding-right: 120px;
+	padding-top: 8px;
+	font-size: 16px;
+}
+.mobile_icon{
+	text-align: center;
+	padding-top: 15px;
+}
+/*.abdroid_icon{
+	padding-right: 16px;
+}*/
+.erweima{
+	text-align: center;
+	margin-top: 18px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	border-top: 1px solid #ddd;
+}

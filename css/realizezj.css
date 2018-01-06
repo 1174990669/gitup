@@ -1,0 +1,314 @@
+﻿.clearfloat{
+	clear: both;
+}
+.realize{
+	margin-top:80px;
+	width: 100%;
+	height: 360px;
+	background:url(../images/realizezj/banner.png) center no-repeat;
+	background-size: 100% ;
+}
+.realizesh{
+	/*width: 290px;*/
+	height: 34px;
+	font-size: 34px;
+	text-align: center;
+	margin-top: 72px;
+	font-family: "微软雅黑";
+}
+.ind_box{
+	margin-top: -76px;
+	width: 100%;
+    /*padding: 75px 0 55px;*/
+    background: #fff;
+    border-bottom: 1px solid #fff;
+}
+.ind_cont{
+	width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+.ind_til{
+	font-size: 34px;
+	font-family: "微软雅黑";
+}
+.logozj{
+	margin: 0 auto;
+	text-align: center;
+	height: 489px;
+	margin-left: 23px;
+	background-size:cover;
+	background:url(../images/realizezj/logo1.png) center  no-repeat;
+}
+.zjfont{
+	 width: 960px;
+	 margin: 0 auto;
+	 word-wrap: break-word;
+	 padding-bottom: 20px;
+}
+.t1{
+	font-size: 16px;
+}
+.mt74{
+	margin-top:74px;
+}
+.mt34{
+	margin-top: 34px;
+}
+.lh26{
+	line-height: 26px;
+}
+/* 愿景、使命、价值观 */
+.features{
+	text-align:center; 
+	width: 1024px;
+    margin: 0 auto;
+}
+.img_cont{
+	width: 1024px;
+	margin: 0 auto;
+}
+.jd_tabBtn{
+	padding-top: 130px;
+	padding-left: 130px;
+    margin: 0 0 -2px 0;
+    position: relative;
+}
+.jd_font{
+	padding-top: 26px;
+	padding-left: 140px;
+	 margin: 0 0 -2px 0;
+    position: relative;
+} 
+.jd_tabBtn li,.jd_font li{
+	float: left;
+    text-align: center;
+}
+.mr280{
+	margin-right: 280px;
+}
+
+.thread{
+	width: 100%;
+	height: 23px;
+	background:url(../images/realizezj/thread.png) center  no-repeat;
+	background-size:cover;
+	margin-top: 24px;
+	background-size: 100%;
+}
+.fontD{
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.mr290{
+	margin-right: 290px;
+}
+.mr270{
+	margin-right: 270px;
+}
+.font_pitch{
+	font-size: 16px;
+	float:left;
+	white-space:normal; 
+	width: 23px;
+/*	height: 183px;*/
+	/*writing-mode:tb-rl;*/
+	line-height: 24px;
+	color: #6d6d6d;
+}
+
+
+.jd_fonts li{
+	float: left;
+}
+.ml125{
+	margin-left: 125px;
+}
+.ml104{
+	margin-left: 104px;
+}
+/*市场分析*/
+.market_box{
+	width: 1024px;
+	margin: 0 auto;
+	/*text-align: center;*/
+}
+.market_font{
+	text-align: center;
+	margin-top: 110px;
+	margin-bottom: 10px;
+}
+.diagram_img{
+	margin: 0 auto;
+	text-align: center;
+	width: 890px;
+	height: 578px;
+	background:url(../images/realizezj/market_diagram.png) center  no-repeat;
+	background-size:cover;
+	/*margin-top: 24px;*/
+}
+.inside_casing{
+	width: 436px;
+	border-left: 3px solid #d5d5d5;
+}
+/*.inside_casing:hover{
+	height: 40px;
+	border-left: 3px solid #00bbff;
+}*/
+/*.xian{
+	border-left: 3px solid red;
+	height: 30px;
+	position: relative;
+	padding-right: 30px;
+
+}*/
+.inside_box{
+	margin-top: 90px;
+}
+.ml78{
+	margin-left: 78px;
+}
+.ml12{
+	padding-left: 12px;
+}
+.logo2{
+	margin: 0 auto;
+	text-align: center;
+	width: 100%;
+	height: 572px;
+	margin-top: 106px;
+	background:url(../images/realizezj/logo2.png) center  no-repeat;
+	background-size:cover;
+}
+/*企业服务质量*/
+.life_service{
+	width: 1024px;
+	height: 480px;
+	margin: 0 auto;
+}
+.company_chart{
+	margin: 0 auto;
+	width: 679px;
+	height: 320px;
+	margin-top: 64px;
+	background:url(../images/realizezj/company_amount.png) center  no-repeat;
+	background-size:cover;
+}
+.market_analysis{
+	margin: 0 auto;
+	width: 679px;
+	height: 320px;
+	margin-top: 64px;
+	background:url(../images/realizezj/market_analysis.png) center  no-repeat;
+	background-size:cover;
+}
+.mt90{
+	margin-top: 90px;
+	color: #333;
+	/*text-align: center;*/
+}
+.fs24{
+	font-size: 24px;
+}
+.rigth_font{
+	width: 272px;
+	padding:14px 0 0 28px;
+	margin-left: 50px;
+	margin-top: 40px;
+	height: 340px;
+	border:1px solid #ffe9b3;
+	background-color:#ffe9b3
+}
+.rigth_font1{
+	width: 272px;
+	padding:14px 0 0 28px;
+	margin-left: 50px;
+	margin-top: 50px;
+	height: 340px;
+	border:1px solid #b7f0ec;
+	background-color:#b7f0ec;
+}
+.fs24{
+	font-size: 24px;
+
+}
+.pt12{
+	padding-top: 6px;
+}
+.pt24{
+	padding-top: 20px;
+}
+.pt8{
+	padding-top: 6px;
+}
+.pt16{
+	padding-top: 10px;
+}
+.fs18{
+	font-size: 18px;
+}
+body{
+	width:100%;
+}
+/*顺应市场拥抱变化 */
+.dimension{
+	/*width: 100%;*/
+	height: 747px;
+	margin-top: 64px;
+	background:url(../images/realizezj/bee.png) center  no-repeat;
+	/*background-size:100%*/
+	/*background-size:cover;*/
+}
+.understand{
+	display: inline-block;
+	width: 170px;
+	height:45px;
+	background:url(../images/realizezj/understand.png) center  no-repeat;
+	background-size:cover;
+}
+.qcode-box{
+	display:none;
+	position: absolute;
+    width: 200px;
+    height: 230px;
+    bottom: 57px;
+    left: -16px;
+    background: rgb(125, 124, 124);
+    border-radius: 24px;
+}
+.qcode-box >img{
+	width:70%;
+	margin-top: 25px;
+}
+.qcode-box >p{
+	color:#fff;
+	margin-top:10px;
+}
+.town{
+	position:relative;
+	display: inline-block;
+	width: 170px;
+	height:45px;
+	background:url(../images/realizezj/town.png) center  no-repeat;
+	background-size:cover;
+}
+.company{
+	position:relative;
+	display: inline-block;
+	width: 170px;
+	height:45px;
+	background:url(../images/realizezj/company.png) center  no-repeat;
+	background-size:cover;
+}
+.ml140{
+	margin-left: 140px;
+}
+/*@media (min-width: 1024px)
+.col-lg-4 {
+    width: 33.33333333333333%;
+}
+@media (min-width: 1920px)
+.col-lg-4 {
+    width: 29%;
+}*/
