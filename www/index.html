@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes" />
+<title></title>
+<link rel="stylesheet" href="package/big.css">
+<!-- <link rel="stylesheet" href="css/global.css"/> -->
+
+
+<script>
+    var ConfigObj = {
+        platForm: 'ios', // web 平台
+        isDebug: false // 设为 true 表示是测试环境
+//      version: '1.0.0'
+    }
+
+</script>
+<script type="text/javascript" src="package/lib.js"></script> 
+<script type="text/javascript" src="package/big.js"></script>  
+<!-- <script type="text/javascript" src="cordova/cordova.js"></script>  -->
+ 
+
+<style>
+	.user_id{padding-left: 6px;}
+    .user_phone{float: right!important;width: 51%;position: absolute;right: 0;top:38px;padding-left: 12px;}
+    .n-user {background: url(../images/0905/m.png) no-repeat;background-size: 30px 30px;height: 30px;width: 30px;margin-top: -6px;}
+    .nav-bot li.on .n-user {background: url(../images/0905/m_t.png) no-repeat;background-size: 30px 30px;}
+</style>
+</head>
+<body>
+<div id="onLin" style="position:absolute;top:10%;z-index: 999;width: 100%;" onclick="document.location.reload()">
+    <img src="images/wif.png" alt="图片被外星人劫持了，点击刷新">
+</div>
+<div class="bottomcon" >
+    <ul class="nav nav-bot clearfix" id="home_navObj" style="display: none;">
+        <li>
+            <a href="javascript:void(0)" class="on" data-t="home">
+                <p><em class="navicons n-lottery"></em></p>
+                <span>彩票</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)" data-t="kaijiangIndex">
+                <p><em class="navicons n-kj"></em></p>
+                <span>开奖</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)" data-t="hemaiIndex">
+                <p><em class="navicons n-hm"></em></p>
+                <span>合买</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)" data-t="newsIdx">
+                <p><em class="navicons n-disc"></em></p>
+                <span >资讯</span>
+            </a>
+        </li>
+        <li >
+            <a href="javascript:void(0)" data-t="userCenter">
+                <p><em class="navicons n-user" style="width: 30px;height: 30px;"></em></p>
+                <span >我的</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+<script type="text/javascript">
+
+if(window.navigator.onLine==true) {　
+// 　　　　alert("首次 -- 已连接");
+$('#onLin').css('display','none')
+
+　　}else {　
+    
+$('#onLin').css('display','block')
+//　　　　alert("首次 -- 未连接");
+
+　　}
+
+　　window.addEventListener("online", online, false);
+
+　　window.addEventListener("offline", offline, false);
+
+　　function online() {  alert("网络已经重新连接");  }
+
+　　function offline() {  alert("网络连接断开");  }
+
+document.body.addEventListener('touchstart', function () { });
+Global.initNav();      //底部导航功能	
+//if(ConfigObj.platForm == 'android'){
+//	Global.checkUpdate();  //检查版本更新
+//}
+Global.checkUpdate();  //检查版本更新
+if(ConfigObj.platForm == 'android' && typeof android_obj != 'undefined'){
+//	setTimeout(function(){
+//		android_obj.hideSplashscreen();
+//	},2000)
+	if(!Global.addBackEvent){  //手机硬键的返回事件
+		Global.addBackEvent =  true;
+		document.addEventListener('deviceready', function () {
+			document.addEventListener("backbutton", exitMyapp, false);
+		}, false);
+		var currentTime,firstTime,secondTime,clickCount=0;
+		function exitMyapp() {
+			    var checkInput = function () {
+                    // 获得焦点的元素
+                    var elem = document.querySelectorAll(':focus');
+                    if (elem.length) {
+                        var focusElem = elem[0];
+
+                        console.dir(focusElem);
+
+                        if (focusElem.tagName == 'TEXTAREA'
+                            || (focusElem.tagName == 'INPUT'
+                            && ['text', 'password', 'tel', 'url', 'number', 'range', 'search'].indexOf(focusElem.type) != -1))
+                            return focusElem;
+                    }
+                    return null;
+                };
+
+			    var checkResult = checkInput();
+
+			    if (checkResult) {
+			        // 失去焦点
+                    checkResult.blur();
+                } else {
+                	var pageId = Global.getActivePage()[0].id;
+                	if(ConfigObj.showWhere){
+	                	switch (pageId){
+				            case 'home':
+								clickCount++;
+								android_obj.toast('再按一次退出');
+								currentTime = new Date();
+								if (clickCount == 1) {
+									firstTime=currentTime.getSeconds()+currentTime.getMinutes()*60+currentTime.getHours()*3600;
+								} else if(clickCount == 2){
+									secondTime=currentTime.getSeconds()+currentTime.getMinutes()*60+currentTime.getHours()*3600;
+									if(secondTime-firstTime<2){  
+										navigator.app.exitApp();
+						            }else {  
+						                clickCount=0;  
+						            }; 
+								};
+				                break;
+				            default:
+				                if (window[pageId + 'Obj']) {
+				                    window[pageId + 'Obj'].goBack();
+				                } else {
+				                    homeObj.show();
+				                }
+				                break;
+				        }
+                	} else{
+                		switch (pageId){
+				            case 'indexNews':
+								clickCount++;
+								android_obj.toast('再按一次退出');
+								currentTime = new Date();
+								if (clickCount == 1) {
+									firstTime=currentTime.getSeconds()+currentTime.getMinutes()*60+currentTime.getHours()*3600;
+								} else if(clickCount == 2){
+									secondTime=currentTime.getSeconds()+currentTime.getMinutes()*60+currentTime.getHours()*3600;
+									if(secondTime-firstTime<2){  
+										navigator.app.exitApp();
+						            }else {  
+						                clickCount=0;  
+						            }; 
+								};
+				                break;
+				            default:
+				                if (window[pageId + 'Obj']) {
+				                    window[pageId + 'Obj'].goBack();
+				                } else {
+				                    homeObj.show();
+				                }
+				                break;
+				        }
+                	}
+                	
+//                  switch (pageId){
+//			            case 'home':
+//							clickCount++;
+//							currentTime = new Date();
+//							if (clickCount == 1) {
+//								firstTime=currentTime.getSeconds()+currentTime.getMinutes()*60+currentTime.getHours()*3600;
+//							} else if(clickCount == 2){
+//								secondTime=currentTime.getSeconds()+currentTime.getMinutes()*60+currentTime.getHours()*3600;
+//								if(secondTime-firstTime<2){  
+//									navigator.app.exitApp();
+//					            }else {  
+//					                clickCount=0;  
+//					            }; 
+//							};
+//			                break;
+//			            default:
+//			                if (window[pageId + 'Obj']) {
+//			                    window[pageId + 'Obj'].goBack();
+//			                } else {
+//			                    homeObj.show();
+//			                }
+//			                break;
+//			        }
+                }
+			}
+	} 
+}
+if(ConfigObj.platForm == 'ios'){
+	document.addEventListener('deviceready',function(){
+		if(typeof StatusBar != 'undefined'){
+			StatusBar.hide();	
+		}
+	},false)
+}
+Global.checkRoute();   //检查路由
+
+document.addEventListener('touchend', function (e) {
+
+    /*
+    var checkInput = function () {
+        // 获得焦点的元素
+        var elem = document.querySelectorAll(':focus');
+        if (elem.length) {
+            var focusElem = elem[0];
+
+            console.dir(focusElem);
+
+            if (focusElem.tagName == 'TEXTAREA'
+                || (focusElem.tagName == 'INPUT'
+                && ['text', 'password', 'tel', 'url', 'number', 'range', 'search'].indexOf(focusElem.type) != -1))
+                return true;
+        }
+        return false;
+    };
+
+    //console.log(checkInput());
+    */
+
+//    Global.checkRealStatus();
+
+//    Global.tips();
+
+//    Global.simpleLoading.open();
+//    $.alertMsg('hello', true, 1000000);
+});
+</script>
+<!-- -->
+<!-- <script async type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=fp726WLTWnwxBVTNORE3blaAsTiPWBy0" ></script> -->
+<!--<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=2GyGPydZu3U2BSKYmVGcQDsS87zBKh7q"></script>-->
+</body> 
+
+</html>
